@@ -1,0 +1,32 @@
+<%- include('../components/header',{page:'pepolehour.com'}) %> 
+<%- include('../components/navbar') %>
+
+<div class="brand">
+   <h1 class="brand-name"> the pepole hours</h1>
+</div>
+<div class="categories">
+
+    <% for( let i = 0; i < categories.length; i++ ) { %>
+        <a class="category " href="/?category=<%= categories[i] %> "><%= categories[i] %>  </a>
+
+    <% } %>
+</div>
+
+<main class="container m-auto bg-secondary">
+    <div class="row m-0 p-0">
+        <div class="col-lg-8 bg-warning">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="" alt="">
+                </div>
+                <div class="col-lg-8"></div>
+            </div>
+        </div>
+        <div class="col-lg-4 bg-dark">
+fdfd
+        </div>
+    </div>
+
+</main>
+
+<%- include('../components/footer') %>

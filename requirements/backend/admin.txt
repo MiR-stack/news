@@ -1,0 +1,27 @@
+---admin---
+    -admin can control everything (create,delete,update)
+        -users
+        -moderator
+        -guest writer
+        -writer
+    - aprove post
+    -review deleting reason.
+    -admin can see all post or any specific post
+
+---moderator---
+    -aprove post
+    -moderator can delete post
+    -promote user to guest writer
+
+---writer---
+    -writer can create post
+    -edit post.
+    -delete post
+    -writer can control his post comment.( delete comment, hide comment from everyone)
+    -writer can see his all post
+
+---guest writer---
+    -writer can create post
+    -edit post.
+    -delete post.
+    -writer can see his all post

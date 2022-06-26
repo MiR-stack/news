@@ -1,0 +1,9 @@
+---user---
+
+    -ceate account.
+    -login
+    -logout
+    -subscribe newsletter.
+    -user will be able to write comment, reply comment, like post and share post.
+    -user can delete his own comment or reply.
+    -user can see writer profile and his all posts.

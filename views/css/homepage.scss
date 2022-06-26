@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+}
+
+.brand {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand .brand-name {
+  font-size: calc(2vw + 1.5rem);
+  font-family: "Playball", cursive;
+  text-transform: capitalize;
+}
+
+.categories {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 100%;
+  font-size: 14px;
+  text-transform: capitalize;
+  max-width: 100%;
+  overflow: auto;
+  &::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.categories .category {
+  padding: 5px 10px;
+  border: 1px solid black;
+  background: #595959;
+  border-radius: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+   color: white;
+
+}
+
+// main {
+//   max-width: 1200px;
+//   padding-top:20px;
+//   box-sizing: border-box !important;
+ 
+
+// }
+
+
+
+

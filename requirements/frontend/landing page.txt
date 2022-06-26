@@ -1,0 +1,47 @@
+functional requirements
+
+---pages---
+    --landing pages
+        -40% big slider with trending news.
+        -navbar
+            -logo
+            -category
+                -general
+                -technology
+                -international
+                -sports
+
+            -authentication system.
+                -login
+                -logout
+            
+            -search bar
+
+            -follow us.(optional)
+                -facebook
+                -twitter
+                -linkdin
+                -instagram
+
+        -trending news
+            -card
+                -image
+                -h3 title
+                -short deccription
+                -views
+                -author and posted date
+                - share
+            -vertical carousel
+        -latest news
+        -technology
+        -international
+        -genarel
+        -footer
+            -about our website(shortly)
+            -quick link
+                -home
+                -about us
+            -category
+            -contact us
+       copyright &copy 2022. all right reserved by website name
+    

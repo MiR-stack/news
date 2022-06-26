@@ -1,0 +1,21 @@
+---reading page---
+    -navbar
+    -brodcumb
+
+--left side
+    -title
+    -author,posted date,lastupdated date,views,comment,reading time
+    -main image.
+    -post start.
+    -dummy image and title
+    -post end
+    -tags
+    -share
+    -comments and reply.
+
+--right side
+    -follow us
+    -subscribe
+    -trending posts.
+
+--footer

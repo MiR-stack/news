@@ -1,0 +1,28 @@
+.footer .brand-name {
+  font-family: "Playball", cursive;
+  font-size: 32px;
+}
+.footer p {
+  font-size: 14px;
+}
+.footer .title {
+  color: #CCCCCC;
+  font-size: 20px;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.footer ul a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #B3B3B3;
+  font-size: 14px;
+}
+.footer table td {
+  font-size: 14px;
+  vertical-align: top;
+  font-weight: 400;
+  color: #B3B3B3;
+}/*# sourceMappingURL=footer.css.map */

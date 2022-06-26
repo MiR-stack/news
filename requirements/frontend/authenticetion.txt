@@ -1,0 +1,13 @@
+---sign up---
+
+    -name
+    -email
+    -passsword
+    -confirm passsword.
+    -submit button
+
+---sign in---
+
+    -email
+    -passsword
+    -sign in button
