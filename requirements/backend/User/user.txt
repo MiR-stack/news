@@ -7,3 +7,12 @@
     -user will be able to write comment, reply comment, like post and share post.
     -user can delete his own comment or reply.
     -user can see writer profile and his all posts.
+
+
+---user end point---
+
+POST/registration [public] {name,email,password}
+POST/auth [public] {email,password}
+GET/logout [private] 
+POST/subscribe [public] {email}
+POST/
