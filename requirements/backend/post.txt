@@ -1,0 +1,47 @@
+---post requirements---
+    
+    -there can be many images,
+    -one main image must needed
+    -there can be multiple paragraph
+    -there may be quotas.
+    -user can comment , reply and share post 
+    -
+
+
+---post modal ---
+
+    -author
+    -type{text or html}
+    -title
+    -short deccription
+    -image
+    -paragraph [array][p1...n]
+    -quotas[array]
+        -pn(paragraph number)[object]
+        -quota
+        -author
+
+    -subImages[array]
+        -pn(paragraph number)[object]
+        -img
+        -source
+        -short deccription
+    
+    -strong (strong or highlighted text)
+    -date
+    -views
+    -share [array]{user id}
+
+
+---comment model---
+
+    -post id
+    -user id
+    -comment
+    -reply[array]
+        -user id[object]
+        -reply
+        -date
+    -love
+    -date
+

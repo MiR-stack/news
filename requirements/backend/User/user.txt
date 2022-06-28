@@ -9,6 +9,18 @@
     -user can see writer profile and his all posts.
 
 
+
+
+
+---user modal---
+     
+     -name
+     -email
+     -password[hash]
+     -memberShip{none or gold,platinum,diamond}
+     -avatar
+     -rank[array]{admin,moderator,writer,quest writer}
+
 ---user end point---
 
 POST/registration [public] {name,email,password}

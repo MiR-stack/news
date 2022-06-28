@@ -1,0 +1,9 @@
+---profile---
+
+
+    -user id
+    -posts[post id]
+    -socal media
+    -date,
+    -number
+    -
