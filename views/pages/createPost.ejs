@@ -1,0 +1,197 @@
+<%- include('../components/header',{page:'pepolehour.com'}) %> <%-
+include('../components/navbar2') %>
+
+<div class="container h-100">
+  <div class="m-auto bg-light p-2 py-4 my-5 rounded" style="max-width: 800px">
+    <h2 class="text-center text-capitalize mb-1">Create new post</h2>
+    <p class="text-center w-75 m-auto text-muted">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, unde?
+      Totam sapiente cupiditate culpa deserunt.
+    </p>
+
+    <% if (error) { %>
+    <p class="text-danger text-center text-capitalize"><%= error %></p>
+    <% } %>
+
+    <form
+      class="container needs-validation text-capitalize"
+      method="post"
+      novalidate
+    >
+      <div class="my-2">
+        <label for="title" class="form-label">news title :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          minlength="50"
+          required
+        />
+        <div class="invalid-feedback">news title required</div>
+      </div>
+      <div class="my-2">
+        <label for="sdeccription" class="form-label">short deccription :</label>
+        <textarea
+          name="shortDeccription"
+          class="form-control"
+          id="sdeccription"
+          cols="10"
+          rows="10"
+          minlength="100"
+          maxlength="400"
+          style="height: 100px"
+          required
+        ></textarea>
+        <div class="invalid-feedback">news title required</div>
+      </div>
+      <div class="my-2">
+        <label for="image" class="form-label">select image :</label>
+        <input
+          type="file"
+          class="form-control"
+          id="image"
+          name="image"
+          required
+        />
+        <div class="invalid-feedback">news title required</div>
+      </div>
+
+      <h2 class="text-center text-capitalize mt-4">news details</h2>
+      <p class="text-center w-75 m-auto text-muted">
+        you can write news text formate or html formate
+      </p>
+      <div class="my-2 m-auto" style="width: 100px">
+        <select
+          class="form-select"
+          name="formate"
+          id="formate"
+          onchange="Formate()"
+        >
+          <option value="text">text</option>
+          <option value="html">html</option>
+        </select>
+      </div>
+      <div class="text">
+        <div class="inputs">
+          <div class="my-2">
+            <label for="p" class="form-label">pera :</label>
+            <textarea
+              name="p_1"
+              class="form-control"
+              id="p"
+              cols="10"
+              rows="10"
+              style="height: 150px"
+              minlength="100"
+              required
+            ></textarea>
+            <div class="invalid-feedback">news title required</div>
+          </div>
+        </div>
+
+        <div class="icons d-flex align-items-center">
+          <i
+            class="btn me-2 fa-solid fa-plus btn-dark addp"
+            data-bs-toggle="tooltip"
+            title="add pera"
+            data-bs-placement="top"
+          ></i>
+          <i
+            class="btn me-2 fa-solid fa-heading btn-dark addH"
+            data-bs-toggle="tooltip"
+            title="add pera"
+            data-bs-placement="top"
+          ></i>
+          <i
+            class="btn me-2 fa-solid fa-image btn-dark addI"
+            data-bs-toggle="tooltip"
+            title="add image"
+            data-bs-placement="top"
+          ></i>
+          <i
+            class="btn me-2 fa-solid fa-quote-left btn-dark addQ"
+            data-bs-toggle="tooltip"
+            title="add quote"
+            data-bs-placement="top"
+          ></i>
+          <i
+            class="btn me-2 fa-solid fa-highlighter btn-dark addS"
+            data-bs-toggle="tooltip"
+            title="add highlighted text"
+            data-bs-placement="top"
+          ></i>
+        </div>
+      </div>
+
+      <!-- html format -->
+
+   <div class="html d-none">
+    <div class="mainH">
+      <div class="my-3">
+        <label for="details" class="form-label">news :</label>
+        <textarea
+          name="details"
+          id="details"
+          cols="30"
+          rows="10"
+          class="form-control"
+        ></textarea>
+      </div>
+    </div>
+    <i
+      class="btn me-2 fa-solid fa-image btn-dark addImg"
+      data-bs-toggle="tooltip"
+      title="add image"
+      data-bs-placement="top"
+    ></i>
+   </div>
+
+      <!-- tags -->
+      <div class="my-3">
+        <label for="title" class="form-label fw-bold">tags :</label>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control p-4"
+            data-role="tagsinput"
+            placeholder="tags"
+            name="tags"
+          />
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-center">
+        <button type="submit" class="btn btn-success  mt-3">POST</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  (() => {
+    "use strict";
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll(".needs-validation");
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach((form) => {
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  })();
+</script>
+<script src="../scripts/pages/post.js"></script>
+
+<%- include('../components/footer') %>

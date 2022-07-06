@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark px-2 px-xl-5">
   <a
-    href="3"
+    href="/"
     class="px-sm-3 px-2 py-1 rounded-1 fw-semibold btn d-none d-md-block"
     style="background: #ffff00; border: 2px solid #b3b300"
   >
@@ -53,7 +53,7 @@
         </button>
       </div>
     </form>
-    
+
     <div
       class="mx-3 text-light"
       type="button"
@@ -64,11 +64,36 @@
     >
       <i class="fa-solid fa-magnifying-glass fa-lg"></i>
     </div>
-    <a
-      href="/login"
-      class="btn text-light fw-semibold"
-      style="background: black"
-      >Login</a
-    >
+    
+    <% if (user) { %>
+    <div class="avatar">
+      <div class="dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <% if (user.image) { %>
+          <img src="../image/users/<%= user.image  %> " />
+          <% } else { %>
+          <h2>h3</h2>
+          <% } %>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/user/auth/logout">log out</a></li>
+          <% if (user.rank.includes('admin' || 'modarator'|| 'writer' || 'geust writer') ) { %>
+          <li>
+            <a class="dropdown-item" href="/user/auth/progile">profile</a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    <% }else{ %>
+    <a href="/user/auth/registration" class="btn btn-dark border">sign up</a>
+    <% } %>
   </div>
 </nav>

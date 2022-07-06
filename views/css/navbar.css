@@ -1,7 +1,15 @@
 
-.nav-link{
-    color:white;
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.test{
-    color:white !important;
+
+.navbar-brand {
+  font-family: "Playball", cursive;
 }

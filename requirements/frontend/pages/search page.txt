@@ -1,0 +1,14 @@
+--- search page ---
+-navbar
+-hero section
+-search bar
+-filter
+
+    -categories
+    -posted time
+    -sorted by
+    -author
+    -reset
+-cards
+-pagination
+-footer

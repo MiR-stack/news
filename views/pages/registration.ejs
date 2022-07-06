@@ -1,0 +1,119 @@
+<%- include('../components/header',{page:'pepolehour.com'}) %> <%-
+include('../components/navbar2') %> <% if (error) { %>
+<div
+  class="alert alert-warning alert-dismissible fade show m-auto"
+  style="max-width: 350px"
+  role="alert"
+>
+  <p class="text-capitalize"><%= error %></p>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
+
+<div class="container h-100">
+  <div class="m-auto bg-light p-2 my-5 rounded" style="max-width: 400px">
+    <h2 class="text-center mb-3">Register</h2>
+
+    <% if (error) { %>
+    <p class="text-danger text-center text-capitalize"><%= error %></p>
+    <% } %>
+
+    <form class="container needs-validation" method="post" novalidate>
+      <input
+        type="text"
+        class="form-control mt-3"
+        name="name"
+        id="name"
+        placeholder="Name"
+        aria-describedby="name"
+        required
+      />
+      <div id="name" class="invalid-feedback">please enter your name</div>
+      <input
+        type="email"
+        class="form-control mt-3"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+      <div id="email" class="invalid-feedback">please enter your email</div>
+
+      <input
+        type="password"
+        class="form-control mt-3"
+        placeholder="Password"
+        name="password"
+        id="password"
+        required
+      />
+      <div id="password" class="invalid-feedback">
+        please enter your password
+      </div>
+
+      <input
+        type="password"
+        class="form-control mt-3"
+        placeholder="Confirm password"
+        name="confirmPassword"
+        id="confirmPassword"
+        required
+      />
+      <div id="confirmPassword" class="invalid-feedback">
+        please confirm your pasword
+      </div>
+      <div id="didn't-matched" class="d-none">please confirm your pasword</div>
+      <div class="form-check mt-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="gridCheck"
+          name="newsletter"
+        />
+        <label class="form-check-label" for="gridCheck">
+          i'd like to receive latest news
+        </label>
+      </div>
+      <p>
+        by clicking Register. i accept all <a href="#">terms</a> &
+        <a href="#">condition</a>
+      </p>
+      <button class="btn btn-dark d-flex m-auto" type="submit">Register</button>
+      <p class="mt-2 text-center">
+        already have an account? <strong><a href="/user/auth/login" class=" text-dark text-decoration-none">login</a></strong>
+      </p>
+    </form>
+  </div>
+</div>
+
+<script>
+  (() => {
+    "use strict";
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll(".needs-validation");
+
+     // Loop over them and prevent submission
+    Array.from(forms).forEach((form) => {
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (!form.checkValidity() ) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  })();
+</script>
+
+<%- include('../components/footer') %>

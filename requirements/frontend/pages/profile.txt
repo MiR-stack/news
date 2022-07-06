@@ -1,0 +1,7 @@
+---dashboard---
+    -rounded image
+    -name
+    -most viewed posts
+    -writer list(sorted by there post views and post )[admin and moderator can see]
+    -create post
+    

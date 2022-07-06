@@ -1,6 +1,6 @@
 .footer .brand-name {
   font-family: "Playball", cursive;
-  font-size: 32px;
+  font-size: 32px !important;
 }
 .footer p {
   font-size: 14px;

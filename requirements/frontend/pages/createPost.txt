@@ -1,0 +1,7 @@
+  --- create post ---
+
+    admin,modarator,writter,guest writte can create post
+
+    -news title
+    -short deccription
+    -image

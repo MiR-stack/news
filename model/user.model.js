@@ -22,7 +22,6 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     minlength: 6,
-    maxlength: 30,
     required: true,
   },
   membership: {
@@ -30,6 +29,11 @@ const userSchema = new mongoose.Schema({
     enum: ["none", "gold", "platinum", "diamond"],
     required: true,
     default: "none",
+  },
+  subscribed: {
+    type: String,
+    enum: ["on", "off"],
+    default: "off",
   },
   avatar: String,
   rank: {

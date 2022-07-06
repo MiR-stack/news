@@ -1,0 +1,87 @@
+<%- include('../components/header',{page:'pepolehour.com'}) %> <%-
+include('../components/navbar') %>
+<div class="container" style="height: 100vh">
+  <div class="m-auto bg-light p-2 mt-5 rounded" style="max-width: 400px">
+    <h2 class="text-center mb-3">Log In</h2>
+
+    <% if (error) { %>
+    <p class="text-danger text-center text-capitalize"><%= error %></p>
+    <% } %>
+
+    <form class="container needs-validation" method="post" novalidate>
+      <input
+        type="email"
+        class="form-control mt-3"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+      <div id="email" class="invalid-feedback">please enter your email</div>
+
+      <input
+        type="password"
+        class="form-control my-3"
+        placeholder="Password"
+        name="password"
+        id="password"
+        autocomplete="off"
+        required
+      />
+      <div id="password" class="invalid-feedback">
+        please enter your password
+      </div>
+
+      <button class="btn btn-dark d-flex m-auto" type="submit">Login</button>
+      <p class="mt-2 text-center">
+        didn't have any account?<strong>
+          <a
+            href="/user/auth/registration"
+            class="text-dark text-decoration-none mt-2"
+            >Register
+          </a></strong
+        >
+      </p>
+    </form>
+  </div>
+</div>
+
+<script>
+  (() => {
+    "use strict";
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll(".needs-validation");
+
+    const password = document.querySelector("#password").value;
+    const confirmPassword = document.querySelector("#confirmPassword").value;
+    console.log(password, confirmPassword);
+
+    const btn = document.querySelector(".btn");
+
+    btn.addEventListener("submit", (e) => {
+      if (password !== confirmPassword) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    });
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach((form) => {
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  })();
+</script>
+
+<%- include('../components/footer') %>
