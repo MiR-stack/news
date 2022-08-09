@@ -2,7 +2,7 @@ let p = 2;
 
 // adding multiple attributes in element
 function setAttributes(el, attrs) {
-  for (var key in attrs) {
+  for ( key in attrs) {
     el.setAttribute(key, attrs[key]);
   }
 }
@@ -20,7 +20,7 @@ setAttributes(Delete, {
 const parent = document.querySelector(".inputs");
 
 //select buttons
-const addp = document.querySelector(".addp");
+const addp = document.querySelector(".addP");
 const addH=document.querySelector('.addH')
 const icons = document.querySelector(".icons");
 const image = document.querySelector(".addI");
@@ -269,6 +269,7 @@ function deleteImg() {
   mainH.lastChild.remove();
   h -= 1;
 }
+
 
 // tag input
 (function () {
