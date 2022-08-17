@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const url =process.env.MONGODB_URI || "mongodb+srv://pepolehours:MiR7904@cluster0.7ipibvh.mongodb.net/newspaper?retryWrites=true&w=majority"
+const url =process.env.MONGODB_URI || 'mongodb://localhost:27017/newspaper'
 
 mongoose
   .connect(url)
